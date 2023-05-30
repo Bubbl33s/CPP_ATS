@@ -1,4 +1,4 @@
-// CREANDO UNA MATRIZ DINPAMICA CON PUNTEROS
+// CREANDO UNA MATRIZ DINÁMICA CON PUNTEROS
 
 #include <iostream>
 #include <conio.h>
@@ -8,11 +8,13 @@ int **dir_matriz, n_filas, n_columnas;
 
 void crearMatriz();
 void mostrarMatriz();
+void borrarMatriz();
 
 int main()
 {
     crearMatriz();
     mostrarMatriz();
+    borrarMatriz();
 
     getch();
     return 0;
@@ -63,4 +65,14 @@ void mostrarMatriz()
     }
 
     std::cout << std::endl;
+}
+
+void borrarMatriz()
+{
+    for (int i = 0; i < n_filas; i++)
+    {
+        delete[] dir_matriz[i];
+    }
+
+    delete[] dir_matriz;
 }
