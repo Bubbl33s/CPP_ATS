@@ -30,7 +30,6 @@ int main()
     }
 
     std::cout << name << " contiene " << count << " voacles\n\n";
-    
 
     getch();
     return 0;
